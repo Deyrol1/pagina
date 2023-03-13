@@ -7,9 +7,14 @@ const routes: Routes = [
     redirectTo: 'folder/Inbox',
     pathMatch: 'full'
   },
+
   {
-    path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+    path: 'folder/compras',
+    loadChildren: () => import('./paginas/compras/compras.module').then( m => m.comprasPageModule)
+  },
+  {
+    path: 'folder/facturas',
+    loadChildren: () => import('./paginas/facturas/facturas.module').then( m => m.FacturasPageModule)
   }
 ];
 
